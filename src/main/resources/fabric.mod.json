@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "crashmygame",
+	"version": "${version}",
+	"name": "Crash My Game",
+	"description": "A mod to forcibly crash your own game, just for kicks.",
+	"authors": [
+		"amvern"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/please-crash-my-game",
+		"sources": "https://modrinth.com/mod/please-crash-my-game"
+	},
+	"license": "MIT",
+	"icon": "assets/crashmygame/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"github.amvern.crashmygame.CrashMyGame"
+		],
+		"client": [
+			"github.amvern.crashmygame.client.CrashMyGameClient"
+		]
+	},
+	"mixins": [
+		"crashmygame.mixins.json",
+		{
+			"config": "crashmygame.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
